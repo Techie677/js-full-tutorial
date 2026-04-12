@@ -42,7 +42,6 @@ for(const country of largeCountries) {
 // give china & pakistan back their positions in the array
 let largeCountries2 = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"];
 console.log("\nMixed up countries:");
-
 for(const country of largeCountries2) {
   console.log(`-${country}`);
 }
@@ -50,7 +49,6 @@ largeCountries2.pop(); // removes Monaco
 largeCountries2.push("Pakistan"); // adds Pakistan to the end of the array
 
 console.log("\nPop push success, Pakistan redeemed:");
-
 for(const country of largeCountries2) {
   console.log(`-${country}`);
 }
@@ -59,7 +57,6 @@ largeCountries2.shift(); // removes Tuvalu
 largeCountries2.unshift("China"); // adds China to the beginning of the array
 
 console.log("\nShift unshift succees, China redeemed:");
-
 for(const country of largeCountries2) {
   console.log(`-${country}`);
 }
