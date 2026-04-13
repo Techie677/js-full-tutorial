@@ -1,7 +1,9 @@
 body {
     padding: 40px;
     background: whitesmoke;
+    color: #130e0f;
     text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #apple-shelf {
@@ -15,4 +17,28 @@ body {
     background: lightsalmon;
     border-radius: 10px;
     height: 30px;
+}
+
+#score-btn {
+  margin-top: 60px;
+  width: 200px;
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background: #b7b7d3;
+}
+
+h1 {
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+#container {
+  width: 100%;
+}
+
+.team-img {
+  width: 100%;
+  border-radius: 100%;
+  margin: 10px;
 }

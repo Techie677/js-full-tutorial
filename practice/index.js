@@ -96,3 +96,114 @@ function sortFruits() {
 }
 
 sortFruits();
+
+
+
+// After the lead tracker extension
+// let & const
+const player = "Phil";
+const opponent = "Justin";
+const game = "AmazingFighter";
+
+let points = 0;
+let hasWon = false;
+
+points +=100;
+hasWon = true;
+
+if (hasWon) {
+  console.log(`${player} got ${points} points and has won the ${game} game!`);
+} else {
+  console.log(`The winner is ${opponent}! ${player} lost the game`);
+}
+
+// Log out items of an array
+let myCourses = ["Learn CSS Animations", "UI Design Fundamentals", "Intro to Clean Code"];
+
+
+function logItems(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+  }
+}
+
+logItems(myCourses);
+
+
+// save to local storage
+let value = "Nice code";
+//localStorage.setItem("value", JSON.stringify( value ));
+const valueFromLocalStorage = JSON.parse(localStorage.getItem("value"));
+console.log(valueFromLocalStorage);
+
+
+// addEventListener
+let data = [
+  {
+    player: "Phil",
+    score: 70
+  },
+  {
+    player: "Ryan",
+    score: 63
+  }
+]
+
+let scoreBtn = document.getElementById("score-btn");
+let scoreDisplay = document.getElementById("score-display");
+
+scoreBtn.addEventListener("click", function() {
+  let scoreLog = data[0].score
+  console.log(scoreLog);
+  scoreDisplay.textContent  = scoreLog;
+});
+
+
+// Sentence generator
+ /* 
+  The function takes two parameters: a description and an array.
+  Should return a string based on the description and array.  
+ */
+
+  function generateSentence(desc, arr) {
+    let baseString = `The ${arr.length} ${desc} are `;
+    const lastIndex = arr.length - 1;
+    const secondLastIndex = arr.length - 2;
+
+    for(let i = 0; i < arr.length; i++) {
+      if (i === lastIndex) {
+        baseString += "and " + arr[i] + ".";
+      } 
+      else if (i === secondLastIndex) {
+        baseString += arr[i] + " ";
+      } else {
+        baseString += arr[i] + ", ";
+      }
+    }
+    return baseString;
+  }
+
+  const sentence = generateSentence("best fruits", ["bananas", "pawpaws", "mangoes"]);
+  const sentence2 = generateSentence("best bikes", ["Honda Crf300L rally", "Qjmotor 450 rx", "Yamaha Tenere 7000 rally"]);
+  console.log(sentence);
+  console.log(sentence2);
+
+
+  // Render images
+  const imgs = [
+    "images/hip1.jpg",
+    "images/hip2.jpg",
+    "images/hip3.jpg"
+  ];
+
+  const container = document.getElementById("container");
+
+  function renderImages() {
+    let imgsDOM = "";
+    for (let i = 0; i < imgs.length; i++) {
+      imgsDOM += `<img class="team-img" src="${imgs[i]}" alt="Employees in the Company">`
+    }
+    container.innerHTML = imgsDOM;
+  }
+
+  renderImages();
